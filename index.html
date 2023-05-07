@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <script
+      src="https://kit.fontawesome.com/5916f716c0.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <header id="header">
+      <div id="container">
+        <nav>
+          <img src="images/dallaslogo.png" class="logo" />
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="./images/my-cv.pdf">Resume</a></li>
+            <i class="fas fa-bars" onclick="closemenu()"></i>
+          </ul>
+          <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+          <p>Full Stack Developer</p>
+          <h2>Hi, I'm John<br /><span>Dallas</span> Moore</h2>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-----------About------------>
+      <section id="about">
+        <div class="container">
+          <div class="row">
+            <div class="about-col-1">
+              <img src="./images/dallaspic2.jpg" />
+            </div>
+            <div class="about-col-2">
+              <h1 class="sub-title">About Me</h1>
+              <p>
+                Hi there! As a Registered Nurse with a passion for technology, I
+                am currently making an exciting transition into the world of web
+                development. While I love providing compassionate care to
+                patients in the Emergency Department at Stormont Vail Hospital,
+                I am also actively working towards obtaining my Full Stack
+                Developer Certification through the University of Kansas. This
+                exciting new challenge allows me to combine my problem-solving
+                skills with my love of technology, and I can't wait to see where
+                this path takes me. My goal is to leverage my diverse background
+                and skills to create innovative, user-friendly digital solutions
+                that make a meaningful impact in people's lives.
+              </p>
+              <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">
+                  Skills
+                </p>
+                <p class="tab-links" onclick="opentab('experience')">
+                  Experience
+                </p>
+                <p class="tab-links" onclick="opentab('education')">
+                  Education
+                </p>
+              </div>
+              <div class="tab-contents active-tab" id="skills">
+                <ul>
+                  <li>
+                    <span>Front-End</span><br />
+                    HTML, CSS, JavaScript, API's(Web, 3rd-Party and REST),
+                    jQuery, Bootstrap and Tailwind
+                  </li>
+                  <li>
+                    <span>Back-End</span><br />
+                    Coming Soon!
+                  </li>
+                  <li>
+                    <span>Other Skills</span><br />
+                    Git, GitHub
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-contents" id="experience">
+                <ul>
+                  <li><span>2022-2023</span><br />Student Web Developer</li>
+                  <li>
+                    <span>2020-2023</span><br />Emergency Department Registered
+                    Nurse
+                  </li>
+                  <li>
+                    <span>2019-2020</span><br />Emergency Department Patient
+                    Care Technician
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-contents" id="education">
+                <ul>
+                  <li>
+                    <span>2023-2023</span><br />University of Kansas Coding
+                    Bootcamp
+                  </li>
+                  <li>
+                    <span>2018-2020</span><br />Baker University - BS - Nursing
+                  </li>
+                  <li>
+                    <span>2014-2018</span><br />University of Kansas - BS -
+                    Liberal Arts and Sciences
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-----------Work------------>
+      <section id="work">
+        <h2 class="sub-title">My Work</h2>
+        <div class="work-list">
+          <div class="work">
+            <img src="images/WeatherDashboard.png" />
+            <div class="layer">
+              <h3>Weather Dashboard</h3>
+              <p>
+                This weather app lets users search for city-specific weather
+                data by entering a city name into the search field, and then
+                fetching information from OpenWeatherMap API. It displays the
+                current weather info like temperature, wind speed, and humidity,
+                along with a 5-day forecast. The app saves previously searched
+                cities in local storage and provides them as buttons for quick
+                access.
+              </p>
+              <div id="link-container">
+                <a href="https://johndallasmoore.github.io/Weather-Dashboard/"
+                  ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                ></a>
+                <a href="https://github.com/JohnDallasMoore/Weather-Dashboard"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/BrewFinder.png" />
+            <div class="layer">
+              <h3>BrewFinder</h3>
+              <p>
+                BrewFinder helps users locate breweries in a city, fetching
+                brewery data via the Open Brewery Database API and displaying
+                markers on a map using the Google Maps API. Users can view and
+                select breweries from the map or view suggested breweries and
+                their details, and get directions from their current location.
+                It makes it easy to plan brewery visits and discover local
+                breweries.
+              </p>
+              <div id="link-container">
+                <a href="#"
+                  ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                ></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/JavaScript Quiz.png" />
+            <div class="layer">
+              <h3>JavaScript Quiz</h3>
+              <p>
+                This JavaScript quiz app uses an object array to store
+                multiple-choice questions, generates HTML elements for the quiz,
+                and tracks the user's score, which is affected by a timer and
+                deducted points for incorrect answers. At the end, users can
+                enter their initials to save their score on the high scores
+                page.
+              </p>
+              <div id="link-container">
+                <a href="https://johndallasmoore.github.io/JavaScript-Quiz/"
+                  ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                ></a>
+                <a href="https://github.com/JohnDallasMoore/JavaScript-Quiz"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#work" class="btn">More Coming Soon!</a>
+      </section>
+
+      <!-----------Contact------------>
+      <section id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="contact-left">
+              <h1 class="sub-title">Contact Me</h1>
+              <p>
+                <i class="fa-solid fa-paper-plane"></i
+                >moore.johndallas@gmail.com
+              </p>
+              <p><i class="fa-solid fa-square-phone"></i>(785)409-8269</p>
+              <div class="social-icons">
+                <a href="https://github.com/JohnDallasMoore"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+                <a href="https://www.linkedin.com/in/john-dallas-moore/"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+              </div>
+              <a href="images/my-cv.pdf" download class="btn2"
+                >Download Resume</a
+              >
+            </div>
+            <div class="contact-right">
+              <form name="submit-to-google-sheet">
+                <input
+                  type="text"
+                  name="Name"
+                  placeholder="Your Name"
+                  required
+                />
+                <input
+                  type="email"
+                  name="Email"
+                  placeholder="Your Email"
+                  required
+                />
+                <textarea
+                  name="Message"
+                  rows="6"
+                  placeholder="Your Message"
+                ></textarea>
+                <button type="submit" class="btn">Submit</button>
+              </form>
+              <span id="msg"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy Dallas. Made with <i class="fa-solid fa-heart"></i> by John Dallas
+        Moore
+      </p>
+    </footer>
+    <script src="./assets/script.js"></script>
+  </body>
+</html>
